@@ -37,7 +37,11 @@ public class Pro_1 extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		
+		PrintWriter out = response.getWriter();
+		response.setContentType("text/html");
+		if (mySQLCnn() == true) {
+			out.println("<h2>MySQL Connected</h2>");
+		}
 		
 	}
 
