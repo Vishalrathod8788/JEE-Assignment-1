@@ -25,7 +25,7 @@ public class Pro_1 extends HttpServlet {
 
 		try {
 			Class.forName(drvr);
-			cnn = DriverManager.getConnection(URL, Username, Password);
+			cnn = DriverManager.getConnection(url, user, pass);
 			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
