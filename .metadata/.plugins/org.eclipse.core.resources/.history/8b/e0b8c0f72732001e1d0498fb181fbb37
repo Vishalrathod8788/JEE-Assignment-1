@@ -17,27 +17,27 @@ public class Pro_1 extends HttpServlet {
 	String URL, Username, Password, Qry;
 	Connection cnn;
 	
-	public boolean mySQLCnn() {
-		url = "jdbc:mysql://localhost:3306/mysql";
-		user = "root";
-		pass = "";
-		drvr = "com.mysql.jdbc.Driver";
-
-		try {
-			Class.forName(drvr);
-			cnn = DriverManager.getConnection(url, user, pass);
-			return true;
-		} catch (Exception e) {
+	public void mySql()
+	{
+		URL = "jdbc:mysql://localhost:3306/mysql";
+		Username = "root";
+		Password = "";
+		
+		try
+		{
+			Class.forName("com.mysql.jdbc.Driver");
+			cnn = DriverManager.getConnection(URL);
+		} catch (Exception e) 
+		{
 			e.printStackTrace();
 		}
-		return false;
+		
 	}
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		
-		
+				
 		
 	}
 
