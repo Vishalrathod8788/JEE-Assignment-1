@@ -78,7 +78,6 @@ public class Pro_1 extends HttpServlet {
 		if (ORCLCnn() == true) {
 			out.println("<h2>Oracle Connected</h2>");
 		}
-		
 		if (AccessCnn() == true) {
 			out.println("<h2>Access Connected</h2>");
 		}
