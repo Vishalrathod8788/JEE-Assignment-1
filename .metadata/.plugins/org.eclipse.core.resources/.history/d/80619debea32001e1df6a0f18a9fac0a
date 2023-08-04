@@ -23,7 +23,6 @@ public class Pro_4 extends HttpServlet {
 		String URL = "jdbc:mysql://localhost:3306/Student";
 		String Username = "root";
 		String Password = "";
-		String sql;
 		
 		try 
 		{
@@ -33,7 +32,6 @@ public class Pro_4 extends HttpServlet {
 			cnn = DriverManager.getConnection(URL, Username, Password);
 			pw.println("Connection Successfuly...");
 			
-			cnn.prepareStatement(sql);
 			
 			
 		} catch (Exception e) 
