@@ -99,7 +99,7 @@ public class Pro_4 extends HttpServlet {
 		} catch (Exception e) 
 		{
 			
-			e.printStackTrace();
+			
 			
 		}
 	}
