@@ -3,7 +3,6 @@ package assi;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
-import java.util.Scanner;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -34,8 +33,13 @@ public class Pro_4 extends HttpServlet {
 			cnn = DriverManager.getConnection(URL, Username, Password);
 			pw.println("Connection Successfuly...");
 			
-			int i = 0;
-			Scanner sc = new Scanner(System.in);
+			sql = "insert into Student values(?, ?, ?, ?)";
+			
+			pr = cnn.prepareStatement(sql);
+			
+			pr.setString(1, "Vishal");
+			pr.setString(2, "Jamnagar");
+			pr.setDate(3, "04-08-2023");
 			
 		} catch (Exception e) 
 		{
