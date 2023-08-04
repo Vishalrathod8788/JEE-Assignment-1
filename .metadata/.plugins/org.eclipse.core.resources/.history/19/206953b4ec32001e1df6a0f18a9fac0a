@@ -42,7 +42,7 @@ public class Pro_4 extends HttpServlet {
 				i = sc.nextInt();
 				switch (i) {
 					case 1: {
-						
+					
 					}
 					break;
 					case 2: {
