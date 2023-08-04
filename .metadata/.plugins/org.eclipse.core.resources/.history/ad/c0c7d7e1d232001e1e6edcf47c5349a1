@@ -41,7 +41,7 @@ public class Pro_1 extends HttpServlet {
 
 		try {
 			Class.forName(drvr);
-			cnn = DriverManager.getConnection(URL, Username, Password);
+			cnn = DriverManager.getConnection(url, user, pass);
 			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -51,14 +51,14 @@ public class Pro_1 extends HttpServlet {
 
 	public boolean AccessCnn() {
 
-		URL = "jdbc:ucanaccess://D://Java//Java_Assignment//J2EE//DB//jdbc_dbAccess.accdb";
-		Username = "";
-		Password = "";
+		url = "jdbc:ucanaccess://D://KrishPithadia//J2EE//DB//jdbc_dbAccess.accdb";
+		user = "";
+		pass = "";
 		drvr = "net.ucanaccess.jdbc.UcanaccessDriver";
 
 		try {
 			Class.forName(drvr);
-			cnn = DriverManager.getConnection(URL, Username, Password);
+			cnn = DriverManager.getConnection(url, user, pass);
 			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -74,12 +74,7 @@ public class Pro_1 extends HttpServlet {
 		if (mySQLCnn() == true) {
 			out.println("<h2>MySQL Connected</h2>");
 		}
-		if (ORCLCnn() == true) {
-			out.println("<h2>Oracle Connected</h2>");
-		}
-		if (AccessCnn() == true) {
-			out.println("<h2>Access Connected</h2>");
-		}
+		
 	}
 
 }
