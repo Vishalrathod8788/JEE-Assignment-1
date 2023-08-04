@@ -16,12 +16,6 @@ public class Pro_4 extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		Connection cnn;
-		PreparedStatement pr;
-		
-		String URL;
-		String Username;
-		String Password;
-		
 	}
 
 }
