@@ -43,7 +43,7 @@ public class Pro_4 extends HttpServlet {
 				i = sc.nextInt();
 				switch (i) {
 					case 1: {
-						sql = "SELECT * FROM tbl_studinfo ORDER BY SBDate";
+						sql = "SELECT * FROM tbl_Studinfo ORDER BY SBDate";
 						pr = cnn.prepareStatement(sql);
 						rs = pr.executeQuery();
 
@@ -60,7 +60,7 @@ public class Pro_4 extends HttpServlet {
 					}
 					break;
 					case 2: {
-						sql = "SELECT * FROM tbl_studeinfo WHERE SGENDER = MALE ORDER BY SCITY DESC";
+						sql = "SELECT * FROM tbl_Studeinfo WHERE SGENDER = MALE ORDER BY SCITY DESC";
 						pr = cnn.prepareStatement(sql);
 						rs = pr.executeQuery();
 
@@ -76,7 +76,7 @@ public class Pro_4 extends HttpServlet {
 						}
 					}
 					case 3:{
-						sql = "SELECT * FROM tbl_studeinfo WHERE SGENDER = MALE ORDER BY SCITY DESC";
+						sql = "SELECT * FROM tbl_Studeinfo WHERE SGENDER = MALE ORDER BY SCITY DESC";
 						pr = cnn.prepareStatement(sql);
 						rs = pr.executeQuery();
 						
