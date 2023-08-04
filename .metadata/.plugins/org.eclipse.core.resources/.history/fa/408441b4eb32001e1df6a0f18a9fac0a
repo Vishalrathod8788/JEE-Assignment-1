@@ -38,8 +38,6 @@ public class Pro_4 extends HttpServlet {
 			pr = cnn.prepareStatement(sql);
 			
 			pr.setString(1, "Vishal");
-			pr.setString(2, "Jamnagar");
-			pr.setDate(3, "04-08-2023");
 			
 		} catch (Exception e) 
 		{
