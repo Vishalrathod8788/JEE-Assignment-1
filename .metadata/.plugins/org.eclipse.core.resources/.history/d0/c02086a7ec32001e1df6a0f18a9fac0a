@@ -48,9 +48,6 @@ public class Pro_4 extends HttpServlet {
 					case 2: {
 						
 					}
-					case 3:{
-						
-					}
 				default:
 					throw new IllegalArgumentException("Unexpected value: " + i);
 				}
