@@ -79,17 +79,6 @@ public class Pro_4 extends HttpServlet {
 						sql = "SELECT * FROM tbl_Stud WHERE SGENDER = MALE ORDER BY SCITY DESC";
 						pr = cnn.prepareStatement(sql);
 						rs = pr.executeQuery();
-						
-						while (rs.next()) {
-							pw.print("<h4>Descending order of SCity where Scity = \"Jamnagar\" & \"Rajkot\"</h4>");
-							pw.print("<P style='color:Green;'>");
-							pw.print(" | " + rs.getInt("SRNO"));
-							pw.print(" | " + rs.getString("SNAME"));
-							pw.print(" | " + rs.getString("SCITY"));
-							pw.print(" | " + rs.getString("SBDATE"));
-							pw.print(" | " + rs.getString("SGENDER"));
-							pw.print("<br />");
-						}
 					}
 				default:
 					throw new IllegalArgumentException("Unexpected value: " + i);
