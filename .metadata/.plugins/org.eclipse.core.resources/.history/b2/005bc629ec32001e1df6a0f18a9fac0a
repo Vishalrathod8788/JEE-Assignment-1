@@ -38,8 +38,7 @@ public class Pro_4 extends HttpServlet {
 			Scanner sc = new Scanner(System.in);
 			
 			do {
-				pw.print("Enter a number:");
-				i = sc.nextInt();
+				
 			} while (i > 0);
 			
 		} catch (Exception e) 
