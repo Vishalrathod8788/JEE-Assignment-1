@@ -28,8 +28,6 @@ public class Pro_4 extends HttpServlet {
 		{
 			Class.forName("com.mysql.jdbc.Driver");
 			pw.println("Class Load...");
-			
-			cnn = DriverManager.getConnection(URL);
 		} catch (Exception e) 
 		{
 			// TODO: handle exception
