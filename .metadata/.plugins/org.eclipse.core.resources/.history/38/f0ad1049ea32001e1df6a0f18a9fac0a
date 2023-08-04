@@ -33,7 +33,6 @@ public class Pro_4 extends HttpServlet {
 			pw.println("Connection Successfuly...");
 			
 			
-			
 		} catch (Exception e) 
 		{
 			// TODO: handle exception
