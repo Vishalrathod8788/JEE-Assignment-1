@@ -20,7 +20,6 @@ public class Pro_4 extends HttpServlet {
 		PrintWriter pw = response.getWriter();
 		Connection cnn;
 		PreparedStatement pr;
-		ResultSet rs;
 		
 		String URL = "jdbc:mysql://localhost:3306/Student";
 		String Username = "root";
@@ -43,20 +42,7 @@ public class Pro_4 extends HttpServlet {
 				i = sc.nextInt();
 				switch (i) {
 					case 1: {
-						sql = "SELECT * FROM tbl_Studinfo ORDER BY SBDate";
-						pr = cnn.prepareStatement(sql);
-						rs = pr.executeQuery();
-
-						while (rs.next()) {
-							pw.print("<h4>Ascending Order \"SBDate\" :-</h4>");
-							pw.print("<P style='color:Green;'>");
-							pw.print(" | " + rs.getInt("SRNO"));
-							pw.print(" | " + rs.getString("SNAME"));
-							pw.print(" | " + rs.getString("SCITY"));
-							pw.print(" | " + rs.getString("SBDATE"));
-							pw.print(" | " + rs.getString("SGENDER"));
-							pw.print("<br />");
-						}
+						
 					}
 					break;
 					case 2: {

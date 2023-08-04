@@ -20,7 +20,6 @@ public class Pro_4 extends HttpServlet {
 		PrintWriter pw = response.getWriter();
 		Connection cnn;
 		PreparedStatement pr;
-		ResultSet rs;
 		
 		String URL = "jdbc:mysql://localhost:3306/Student";
 		String Username = "root";
