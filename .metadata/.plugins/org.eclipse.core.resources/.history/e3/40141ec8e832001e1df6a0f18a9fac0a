@@ -1,8 +1,6 @@
 package assi;
 
 import java.io.IOException;
-import java.sql.*;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +13,7 @@ public class Pro_4 extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
-		Connection cnn;
+		
 	}
 
 }
