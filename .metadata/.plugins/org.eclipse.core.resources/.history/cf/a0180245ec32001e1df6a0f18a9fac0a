@@ -40,11 +40,6 @@ public class Pro_4 extends HttpServlet {
 			do {
 				pw.print("Enter a number:");
 				i = sc.nextInt();
-				switch (i) {
-
-				default:
-					throw new IllegalArgumentException("Unexpected value: " + i);
-				}
 			} while (i > 0);
 			
 		} catch (Exception e) 
