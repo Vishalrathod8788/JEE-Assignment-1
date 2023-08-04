@@ -60,10 +60,7 @@ public class Pro_4 extends HttpServlet {
 					}
 					break;
 					case 2: {
-						sql = "SELECT * FROM tbl_Stud WHERE SGENDER = MALE ORDER BY SCITY DESC";
-						ps = cnn.prepareStatement(sql);
-						rs = ps.executeQuery();
-
+						
 					}
 					case 3:{
 						
