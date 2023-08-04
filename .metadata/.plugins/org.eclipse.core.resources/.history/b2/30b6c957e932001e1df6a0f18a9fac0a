@@ -18,7 +18,7 @@ public class Pro_4 extends HttpServlet {
 		Connection cnn;
 		PreparedStatement pr;
 		
-		String URL = "jdbc:mysql://localhost:3306/Student";
+		String URL = "";
 		String Username = "root";
 		String Password = "";
 		
