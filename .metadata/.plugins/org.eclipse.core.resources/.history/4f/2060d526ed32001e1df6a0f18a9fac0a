@@ -76,9 +76,7 @@ public class Pro_4 extends HttpServlet {
 						}
 					}
 					case 3:{
-						sql = "SELECT * FROM tbl_Stud WHERE SGENDER = MALE ORDER BY SCITY DESC";
-						ps = cnn.prepareStatement(sql);
-						rs = ps.executeQuery();
+						
 					}
 				default:
 					throw new IllegalArgumentException("Unexpected value: " + i);
