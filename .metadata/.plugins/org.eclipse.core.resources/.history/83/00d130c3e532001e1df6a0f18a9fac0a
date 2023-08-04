@@ -80,7 +80,9 @@ public class Pro_1 extends HttpServlet {
 		if (AccessCnn() == true) {
 			out.println("<h2>Access Connected</h2>");
 		}
-
+		
+		
+		
 	}
 
 }
