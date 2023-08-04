@@ -61,19 +61,9 @@ public class Pro_4 extends HttpServlet {
 					break;
 					case 2: {
 						sql = "SELECT * FROM tbl_Stud WHERE SGENDER = MALE ORDER BY SCITY DESC";
-						pr = cnn.prepareStatement(sql);
-						rs = pr.executeQuery();
+						ps = cnn.prepareStatement(sql);
+						rs = ps.executeQuery();
 
-						while (rs.next()) {
-							pw.print("<h4>Descending order of \"SCity\" whose Gender is \"Male\"</h4>");
-							pw.print("<P style='color:Green;'>");
-							pw.print(" | " + rs.getInt("SRNO"));
-							pw.print(" | " + rs.getString("SNAME"));
-							pw.print(" | " + rs.getString("SCITY"));
-							pw.print(" | " + rs.getString("SBDATE"));
-							pw.print(" | " + rs.getString("SGENDER"));
-							pw.print("<br />");
-						}
 					}
 					case 3:{
 						
