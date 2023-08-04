@@ -1,7 +1,6 @@
 package assi;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.*;
 
 import javax.servlet.ServletException;
@@ -16,7 +15,6 @@ public class Pro_4 extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
-		PrintWriter pw = response.getWriter();
 		Connection cnn;
 		PreparedStatement pr;
 		
@@ -27,7 +25,6 @@ public class Pro_4 extends HttpServlet {
 		try 
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			pw.println("Class Load...");
 		} catch (Exception e) 
 		{
 			// TODO: handle exception

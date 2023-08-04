@@ -27,7 +27,7 @@ public class Pro_4 extends HttpServlet {
 		try 
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			pw.println("Class Load...");
+			
 		} catch (Exception e) 
 		{
 			// TODO: handle exception
