@@ -22,11 +22,9 @@ public class Pro_4 extends HttpServlet {
 		String Username = "root";
 		String Password = "";
 		
-		try 
-		{
+		try {
 			Class.forName("com.mysql.jdbc.Driver");
-		} catch (Exception e) 
-		{
+		} catch (Exception e) {
 			// TODO: handle exception
 		}
 	}
