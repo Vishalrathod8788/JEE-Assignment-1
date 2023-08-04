@@ -74,7 +74,6 @@ public class Pro_1 extends HttpServlet {
 		if (mySQLCnn() == true) {
 			out.println("<h2>MySQL Connected</h2>");
 		}
-		
 		if (ORCLCnn() == true) {
 			out.println("<h2>Oracle Connected</h2>");
 		}
