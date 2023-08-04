@@ -33,7 +33,6 @@ public class Pro_4 extends HttpServlet {
 			cnn = DriverManager.getConnection(URL, Username, Password);
 			pw.println("Connection Successfuly...");
 			
-			sql = "insert into Student values(?, ?, ?, ?, ?)";
 			cnn.prepareStatement(sql);
 			
 			
