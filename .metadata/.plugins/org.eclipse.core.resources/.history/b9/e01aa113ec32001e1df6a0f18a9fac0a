@@ -37,10 +37,6 @@ public class Pro_4 extends HttpServlet {
 			int i = 0;
 			Scanner sc = new Scanner(System.in);
 			
-			do {
-				
-			} while (i > 0);
-			
 		} catch (Exception e) 
 		{
 			// TODO: handle exception
