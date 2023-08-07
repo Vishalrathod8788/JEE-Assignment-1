@@ -1,0 +1,75 @@
+package assi;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+import javax.servlet.Servlet;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class Pro_3
+ */
+@WebServlet("/Pro_3")
+public class Pro_3 extends HttpServlet implements Servlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		PrintWriter pw = response.getWriter();
+		
+		int i = 0;
+		Scanner sc = new Scanner(System.in);
+		pw.print("Enter a number:");
+		i = sc.nextInt();
+		
+		 int day = 5;
+		String dayString;
+			switch (i) {
+			case 1:
+	            dayString = "Monday";
+	            break;
+	 
+	        // Case
+	        case 2:
+	            dayString = "Tuesday";
+	            break;
+	 
+	            // Case
+	        case 3:
+	            dayString = "Wednesday";
+	            break;
+	 
+	            // Case
+	        case 4:
+	            dayString = "Thursday";
+	            break;
+	 
+	        // Case
+	        case 5:
+	            dayString = "Friday";
+	            break;
+	 
+	            // Case
+	        case 6:
+	            dayString = "Saturday";
+	            break;
+	 
+	            // Case
+	        case 7:
+	            dayString = "Sunday";
+	            break;
+			default:
+				throw new IllegalArgumentException("Unexpected value: " + i);
+			}
+		}
+}

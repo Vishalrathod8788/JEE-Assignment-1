@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;DB_Driver_Jar_Files&apos; to &apos;Pro_3&apos;&#x0D;&#x0A;- Original project: &apos;Assignment-1&apos;&#x0D;&#x0A;- Destination element: &apos;Pro_3&apos;&#x0D;&#x0A;- Original element: &apos;DB_Driver_Jar_Files&apos;" description="Copy folder" element1="DB_Driver_Jar_Files" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1691429097873" target="/Pro_3" units="0" version="1.0"/>
+</session>
