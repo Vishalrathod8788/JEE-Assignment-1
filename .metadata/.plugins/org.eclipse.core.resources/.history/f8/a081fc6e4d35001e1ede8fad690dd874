@@ -1,0 +1,86 @@
+package pro_4;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.*;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class ResultSet
+ */
+@WebServlet("/ResultSet")
+public class ResultSet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	public ResultSet rs;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+  	{   
+  		//response.setContentType("text/html");
+  		PrintWriter pw =response.getWriter();
+  		
+  		String srno=request.getParameter("srno");
+        String sname =request.getParameter("sname");
+        String scity =request.getParameter("scity");
+        String sbdate =request.getParameter("sbdate");
+        String sgender =request.getParameter("sgender");
+ 	
+  		
+  		try
+  	    {
+  			Class.forName("oracle.jdbc.driver.OracleDriver");
+			String url = "jdbc:oracle:thin:@localhost:1521:XE";
+			String user = "system";
+			String password = "171717";
+			Connection conn = DriverManager.getConnection(url, user, password);
+			System.out.println("Connection Done");
+  			Statement stmt = conn.createStatement();
+			//stmt.execute("create table ResultSet (srno number(5),sname varchar(20),scity varchar(15)"
+				//	+ "sbdate varchar(10),sgender varchar(5))");
+  			
+			String q="insert into ResultSet values(";
+			q+="'"+srno+"',";
+			q+="'"+sname+"',";
+			q+="'"+scity+"',";
+			q+="'"+sbdate+"',";
+			q+="'"+sgender+"')";
+			stmt.execute(q);
+			System.out.println("record inserted");
+			
+		  stmt=conn.createStatement();
+		  q="select*from ResultSet";
+		  rs=stmt.executeQuery(q);
+		
+		  pw.println("<table border=1 align=center>");
+		  pw.println("<th>sno</th>");
+		  pw.println("<th>sname</th>");
+		  pw.println("<th>scity</th>");
+		  pw.println("<th>sbdate</th>");
+		  pw.println("<th>sgender</th>");
+		  
+		  while(rs.next())
+		  {
+			  pw.println("<tr>");
+			  pw.println("<td>"+rs.getInt(1)+"</td>");
+			  pw.println("<td>"+rs.getString(2)+"</td>");
+			  pw.println("<td>"+rs.getString(3)+"</td>");
+			  pw.println("<td>"+rs.getString(4)+"</td>");
+			  pw.println("<td>"+rs.getString(5)+"</td>");
+
+			  pw.println("</tr>");
+			  
+		  }	  
+		  pw.println("</table>");
+  	    }
+  	   catch(Exception e)
+     	{
+  		     System.out.println("Exception :"+e.toString());
+    	}
+	}
+
+}
