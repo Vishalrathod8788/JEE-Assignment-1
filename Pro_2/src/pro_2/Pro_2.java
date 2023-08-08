@@ -2,6 +2,7 @@ package pro_2;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.ResponseCache;
 import java.sql.*;
 import java.sql.DriverManager;
 
@@ -10,11 +11,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.ws.RespectBinding;
+import javax.xml.ws.Response;
 
 @WebServlet("/Pro_2")
 public class Pro_2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
 	String URL, Username, Password, drvr;
 	Connection cnn;
 	
@@ -71,6 +73,7 @@ public class Pro_2 extends HttpServlet {
 	{
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
+		
 		if (mySQLCnn() == true) {
 			out.println("<h2>MySQL Connected</h2>");
 		}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Delete Student Details</title>
+</head>
+<h1>Delete Student Details</h1>
+<hr><hr>
+<body>
+	<form action="Delete" method="get">
+	<p>	Enter No : <input type="text" name="txtno"></p>
+	<p>	Enter Name : <input type="text" name="txtname"></p>
+	<p>	<input type="submit" value="Delete">
+		<input type="reset" value="Clear"></p>
+	</form>
+	<p>Developed By Vishal Rathod</p>
+</body>
+</html>
