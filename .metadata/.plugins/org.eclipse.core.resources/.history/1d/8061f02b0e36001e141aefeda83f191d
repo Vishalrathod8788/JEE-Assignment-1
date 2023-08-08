@@ -1,0 +1,40 @@
+package pro_10;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/clstmt")
+public class clstmt extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		PrintWriter pw = response.getWriter();
+		int no =Integer.parseInt( request.getParameter("sno"));
+		String name = null;
+		try {
+
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "system", "171717");
+			String qry = "{call studinout(?,?)}";
+			CallableStatement csmt = con.prepareCall(qry);
+			csmt.setInt(1, no);
+			csmt.registerOutParameter(2, Types.CHAR);
+			csmt.execute();
+			name = csmt.getString(2);
+			pw.println("result found : "+name);
+			
+			
+			csmt.close();
+			con.close();
+		} catch (Exception e) {
+			pw.println(e);
+		}
+	}
+
+}
