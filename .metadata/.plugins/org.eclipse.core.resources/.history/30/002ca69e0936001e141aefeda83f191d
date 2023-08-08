@@ -1,0 +1,71 @@
+package pro_2;
+
+import java.io.IOException;
+import java.sql.*;
+import java.sql.DriverManager;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/Pro_2")
+public class Pro_2 extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String URL, Username, Password, drvr;
+		Connection cnn;
+		
+		public boolean mySQLCnn() {
+			URL = "jdbc:mysql://localhost:3306/mysql";
+			Username = "root";
+			Password = "";
+			drvr = "com.mysql.jdbc.Driver";
+
+			try {
+				Class.forName(drvr);
+				cnn = DriverManager.getConnection(URL, Username, Password);
+				return true;
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return false;
+		}
+	    
+		public boolean ORCLCnn() {
+			URL = "jdbc:oracle:thin:@localhost:1521:orcl";
+			Username = "system";
+			Password = "system";
+			drvr = "oracle.jdbc.driver.OracleDriver";
+
+			try {
+				Class.forName(drvr);
+				cnn = DriverManager.getConnection(URL, Username, Password);
+				return true;
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return false;
+		}
+
+		public boolean AccessCnn() {
+
+			URL = "jdbc:ucanaccess://D://Java//Java_Assignment//J2EE//DB//jdbc_dbAccess.accdb";
+			Username = "";
+			Password = "";
+			drvr = "net.ucanaccess.jdbc.UcanaccessDriver";
+
+			try {
+				Class.forName(drvr);
+				cnn = DriverManager.getConnection(URL, Username, Password);
+				return true;
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return false;
+		}
+	}
+
+}
